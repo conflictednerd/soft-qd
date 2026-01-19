@@ -1,0 +1,28 @@
+# CVT-CMA-MEGA configuration
+# Run with: `python -m src.main --config-name cma_mega.yaml`
+# Total number of evals: num_iterations * num_emitters * batch_size
+# TODO: Important hparams for sweep are: optim_lr, sigma0, population_size (as large as possible)
+defaults:
+  - task: image_rendering
+
+algo_name: "cma_mega"
+# General settings
+seed: 42
+population_size: 10000
+num_emitters: 15
+batch_size: 36
+grad_opt: "adam"
+optim_lr: 1.0
+sigma0: 10.0
+
+
+# Training loop
+num_iterations: 950
+log_frequency: 1
+
+# Logging
+wandb:
+  enable: true
+  project: "softqd"
+  entity: null # Your wandb username or team name
+  tags: []

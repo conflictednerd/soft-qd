@@ -1,0 +1,12 @@
+# Image renderig task configuration
+# optimizer.lr = 0.1 gives good results
+task_name: image_rendering
+num_circles: 1024
+descriptor_dim: 5 # Dimensionality of the behavior space
+
+target_image: "assets/girl_pearl_earing.jpg"
+canvas_width: 64
+canvas_height: 64
+softness: 10.0
+objective_type: "ssim" # ssim or mse
+normalized_descriptors: false # If true descriptors are in [0, 1]

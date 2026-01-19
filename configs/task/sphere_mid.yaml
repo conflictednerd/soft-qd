@@ -1,0 +1,6 @@
+# Sphere task configuration
+task_name: sphere
+task_type: "mid"
+solution_dim: 2048
+descriptor_dim: 8 # Dimensionality of the behavior space
+normalized_descriptors: False

@@ -1,0 +1,11 @@
+# Latent Space Illumination task configuration
+task_name: "lsi"
+task_type: "base"
+target_prompt: "A photo of Tom Cruise"
+# TODO: Explicitly add Tom Cruise in the descriptors
+descriptor_prompts: [["Photo of Tom Cruise as a small child", "Photo of Tom Cruise as an elderly person"], ["Photo of Tom Cruise with long hair", "Photo of Tom Cruise with short hair"]]
+stylegan_model_name: "ffhq"
+clip_model_name: "openai/clip-vit-base-patch32"
+
+normalized_descriptors: false # If true descriptors are in [0, 1]
+seed: 18

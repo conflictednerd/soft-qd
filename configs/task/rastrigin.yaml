@@ -1,0 +1,6 @@
+# Rastrigin task configuration
+task_name: rastrigin
+task_type: "base"
+solution_dim: 128
+descriptor_dim: 4 # Dimensionality of the behavior space
+normalized_descriptors: False

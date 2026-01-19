@@ -1,0 +1,29 @@
+# CVT-CMA-MAEGA configuration
+# Run with: `python -m src.main --config-name cma_maega.yaml`
+# Total number of evals: num_iterations * num_emitters * batch_size
+# TODO: Important hparams for sweep are: optim_lr, sigma0, archive_lr
+defaults:
+  - task: image_rendering
+
+algo_name: "cma_maega"
+# General settings
+seed: 42
+population_size: 10000
+num_emitters: 15
+batch_size: 36
+archive_lr: 0.01
+grad_opt: "adam"
+optim_lr: 1.0
+sigma0: 10
+
+
+# Training loop
+num_iterations: 950
+log_frequency: 1
+
+# Logging
+wandb:
+  enable: true
+  project: "softqd"
+  entity: null
+  tags: []

@@ -1,0 +1,9 @@
+numpy
+git+https://github.com/matthias-wright/flaxmodels.git
+tensorflow-datasets
+tensorflow==2.4.1
+optax
+argparse
+wandb
+tqdm
+dill

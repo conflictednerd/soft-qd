@@ -1,0 +1,27 @@
+# PGA-ME configuration
+# Run with: `python -m src.main --config-name pga_me.yaml`
+# Total number of evals: num_iterations * num_emitters * batch_size * 1.5
+# TODO: Important hparams for sweep are: iso_sigma, line_sigma, grad_step_size,
+defaults:
+  - task: sphere
+
+algo_name: "pga_me"
+# General settings
+seed: 42
+population_size: 10000
+iso_sigma: 0.1
+line_sigma: 0.2
+grad_step_size: 0.1
+batch_size: 128
+
+
+# Training loop
+num_iterations: 3000
+log_frequency: 1
+
+# Logging
+wandb:
+  enable: true
+  project: "softqd"
+  entity: null # Your wandb username or team name
+  tags: []

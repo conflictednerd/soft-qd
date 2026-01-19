@@ -1,0 +1,27 @@
+# Main configuration
+defaults:
+  - task: image_rendering
+
+algo_name: "softqd"
+seed: 42
+population_size: 1024 # Number of solutions
+
+# Algorithm hyperparameters
+batch_size: 64
+# Number of closest neighbors considered for computing the repulsive term.
+# If -1, all solutions will be considered.
+num_neighbors: 16
+sigma_rule: 1.0 # a constant float or "nn" or "inverse_nn"
+optimizer:
+  learning_rate: 5e-2
+
+# Training loop
+num_iterations: 1000
+log_frequency: 1
+
+# Logging
+wandb:
+  enable: true
+  project: "softqd"
+  entity: null # Your wandb username or team name
+  tags: []

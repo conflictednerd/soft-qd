@@ -1,0 +1,28 @@
+# CVT-CMA-MAE configuration
+# Run with: `python -m src.main --config-name cma_mae.yaml`
+# Total number of evals: num_iterations * num_emitters * batch_size
+# TODO: Important hparams for sweep are: sigma0, archive_lr, population_size (as large as possible)
+defaults:
+  - task: image_rendering
+
+algo_name: "cma_mae"
+# General settings
+seed: 42
+use_separable: true # If true, sep-cma-es will be used which scales linearly with solution dim
+population_size: 10000
+num_emitters: 15
+batch_size: 36
+archive_lr: 0.01
+sigma0: 0.5
+
+
+# Training loop
+num_iterations: 950
+log_frequency: 1
+
+# Logging
+wandb:
+  enable: true
+  project: "softqd"
+  entity: null # Your wandb username or team name
+  tags: []

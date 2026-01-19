@@ -1,0 +1,30 @@
+# NSLC configuration
+# Run with: `python -m src.main --config-name nslc.yaml`
+# Total number of evals: num_iterations * num_emitters * batch_size
+# TODO: Important hparams for sweep are: sigma0, k_neighbors, novelty_threshold, num_emitters
+defaults:
+  - task: sphere
+
+algo_name: "nslc"
+# General settings
+seed: 42
+use_separable: true # If true, sep-cma-es will be used which scales linearly with solution dim
+result_archive_size: 10000
+max_archive_size: 50000 # Optimization will terminate if size of novelty archives exceeds this
+num_emitters: 15
+k_neighbors: 16
+novelty_threshold: 0.005
+batch_size: 36
+sigma0: 0.5
+
+
+# Training loop
+num_iterations: 2000
+log_frequency: 1
+
+# Logging
+wandb:
+  enable: true
+  project: "softqd"
+  entity: null # Your wandb username or team name
+  tags: []

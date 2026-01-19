@@ -1,0 +1,32 @@
+# Dominated Novelty Search (DNS) configuration
+# Run with: `python -m src.main --config-name dns.yaml`
+# Total number of evals: num_iterations * batch_size
+defaults:
+  - task: image_rendering
+
+algo_name: "dns"
+# General settings
+seed: 42
+population_size: 1024
+eval_batch_size: 128
+isoline_batch_size: 128
+
+k: 8 # Number of nearest neighbors used
+iso_sigma: 0.05
+line_sigma: 0.5
+
+use_grad: false
+grad_step_size: 0.1
+grad_batch_size: 64 # We will have to evaluate each solution twice (once for grad and once for values after gradient update) so having this be 0.5 times iso batch size is good.
+
+
+# Training loop
+num_iterations: 8000
+log_frequency: 1
+
+# Logging
+wandb:
+  enable: true
+  project: "softqd"
+  entity: null # Your wandb username or team name
+  tags: []

@@ -1,0 +1,10 @@
+# Latent Space Illumination task configuration
+task_name: "lsi"
+task_type: "hard"
+target_prompt: "A photo of a detective from a noir film" # Wise wizard, Leonardo DiCaprio, Keanu Reeves
+descriptor_prompts: [["Photo of a young kid", "Photo of an elderly person"], ["Photo of a person with long hair", "Photo of a person with short hair"], ["Photo of a person with dark hair", "Photo of a person with white hair"], ["Photo of a person smiling", "Photo of a person frowning"], ["Photo of a person with a round face", "Photo of a person with an oval face"], ["Photo of a person with thin, sparse hair", "Photo of a person with thick, full hair"], ["Photo of a person looking directly into the camera", "Photo of a person looking sideways"]]
+stylegan_model_name: "ffhq"
+clip_model_name: "openai/clip-vit-base-patch32"
+
+normalized_descriptors: false # If true descriptors are in [0, 1]
+seed: 18
