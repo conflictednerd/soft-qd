@@ -1,9 +1,9 @@
 # Soft Quality-Diversity Optimization (SQUAD)
 
-This repository contains the reference implementation of **Soft QD Using Approximated Diversity** , introduced in the paper:
+This repository contains the reference implementation of **Soft QD Using Approximated Diversity**, published at ICLR 2026.
 
 > **Soft Quality-Diversity Optimization**  
-> *[arXiv:2512.00810](https://arxiv.org/abs/2512.00810)*
+> [arXiv:2512.00810](https://arxiv.org/abs/2512.00810)
 
 **SQUAD** is a Quality-Diversity (QD) algorithm that optimizes the **Soft QD Score**, a discretization-free objective that unifies diversity and performance and enables gradient-based optimization. It enables efficient optimization of a population of diverse solutions for differentiable QD tasks.
 
@@ -107,10 +107,12 @@ python -m src.main --config-name "cma_mae.yaml" task=image_rendering task.normal
 If you use this code in your work, please cite:
 
 ```bibtex
-@article{hedayatian2025soft,
-  title={Soft Quality-Diversity Optimization},
-  author={Hedayatian, Saeed and Nikolaidis, Stefanos},
-  journal={arXiv preprint arXiv:2512.00810},
-  year={2025}
+@inproceedings{
+hedayatian2026soft,
+title={Soft Quality-Diversity Optimization},
+author={Saeed Hedayatian and Stefanos Nikolaidis},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=LCKixyFShR}
 }
 ```
